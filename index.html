@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid System</title>
+    <style>
+        body {
+            text-align: center;
+            color: #fff;
+        }
+        #content {
+            display: grid;
+            /* grid-template-columns: 30% 20% 50%; */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* Repeat 9 Colums to 1 fraction every */
+            grid-template-columns: repeat(3, 1fr);
+            /* Min height of row 200px and max is make auto */
+            /* grid-auto-rows: minmax(200px, auto); */
+            grid-template-rows: repeat(3, minmax(200px, auto));
+            max-width: 960px;
+            margin: 0 auto;
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px; */
+            /* grid-gap used when you want to give 10px gap from column and row both */
+            grid-gap: 10px;
+        }
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+        }
+        #content div:nth-child(even){
+            background: #777;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div>1</div>
+        <div>2</div>
+        <div>You don't need to install any browser plugins or manually add code snippets to your pages for the reload functionality to work, see "How it works" section below for more information. If you don't want/need the live reload, you should probably use something even simpler, like the following Python-based one-liner:You don't need to install any browser plugins or manually add code snippets to your pages for the reload functionality to work, see "How it works" section below for more information. If you don't want/need the live reload, you should probably use something even simpler, like the following Python-based one-liner:</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
