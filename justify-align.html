@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Lines</title>
+    <style>
+        body {
+            text-align: center;
+            color: #fff;
+        }
+        #content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Set all row 150px */
+            grid-auto-rows: minmax(150px, auto);
+            margin: 0 auto;
+            grid-gap: 10px;
+            max-width: 960px;
+            /*for up and down use align-items*/
+            /* align-items: stretch; */
+            /*for left and right use justify-items*/
+            /* justify-items: start; */
+        }
+        #content div {
+            background: green;
+            padding: 30px;
+        }
+        #content div:nth-child(even){
+            background: black;
+        }
+        .one {
+            justify-self: end;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="one">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
